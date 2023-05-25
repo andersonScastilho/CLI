@@ -1,20 +1,10 @@
 import inquirer from 'inquirer';
 
-import { IAnswers } from 'interfaces/answer.interface';
+//Question
+import { questions } from 'questions';
 
-const questions = [
-  {
-    type: 'list',
-    name: 'tech',
-    message: 'Qual Boilerplate devo criar ?',
-    choices: ['NodeJs + Typescript', 'Scss'],
-  },
-  {
-    type: 'input',
-    name: 'techName',
-    message: 'Qual nome devo dar para pasta do projeto?',
-  },
-];
+//Interface
+import { IAnswers } from 'interfaces/answer.interface';
 
 class Init {
   constructor() {

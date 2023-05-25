@@ -1,4 +1,6 @@
 import { EChoiceBoilerPlate } from 'enum/choices-boileplate.enum';
+import path from 'node:path';
+import fs from 'node:fs';
 
 export const questions = [
   {
@@ -22,6 +24,12 @@ export const questions = [
         folderName === 'BoilerPlateScss'
       )
         return 'Não é possivel criar a pasta com esse nome';
+
+      try {
+        const dir = path.resolve(folderName);
+        fs.accessSync(dir, fs.constants.R_OK);
+        return 'Ja existe uma pasta com este nome!';
+      } catch (error) {}
 
       return true;
     },

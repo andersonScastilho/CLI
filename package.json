@@ -12,6 +12,9 @@
     "test": "jest --no-cache --watch-all --coverage",
     "test:ci": "jest --no-cache --coverage"
   },
+  "bin": {
+    "vfull": "./dist/index.js"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {

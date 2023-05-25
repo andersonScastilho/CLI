@@ -1,4 +1,4 @@
 export interface IAnswers {
   tech: string;
-  techName: string;
+  folderName: string;
 }

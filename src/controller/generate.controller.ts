@@ -14,10 +14,6 @@ class GenerateController {
         case EChoiceBoilerPlate.NODEJS_TS:
           this._execPath(EGitName.NODEJS_TS, answer.folderName);
           break;
-        case EChoiceBoilerPlate.SCSS:
-          this._execPath(EGitName.SCSS, answer.folderName);
-
-          break;
       }
     } catch (error) {
       console.log(error);
